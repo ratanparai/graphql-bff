@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  graphql.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7000:80"
+
+  address.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7001:80"
+
+
+  payment.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7002:80"
+
+
+  student.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7003:80"
+

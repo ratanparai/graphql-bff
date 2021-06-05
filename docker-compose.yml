@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  graphql.api:
+    image: ${DOCKER_REGISTRY-}graphqlapi
+    build:
+      context: .
+      dockerfile: src/Gateway/Graphql.API/Dockerfile
+
+  address.api:
+    image: ${DOCKER_REGISTRY-}addressapi
+    build:
+      context: .
+      dockerfile: src/Services/Address/Address.API/Dockerfile
+
+
+  payment.api:
+    image: ${DOCKER_REGISTRY-}paymentapi
+    build:
+      context: .
+      dockerfile: src/Services/Payment/Payment.API/Dockerfile
+
+
+  student.api:
+    image: ${DOCKER_REGISTRY-}studentapi
+    build:
+      context: .
+      dockerfile: src/Services/Student/Student.API/Dockerfile
+

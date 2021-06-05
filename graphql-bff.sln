@@ -7,21 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{31ABBD13-5B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{8C9CE111-2854-4321-A159-91E7DD2E2874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphql.API", "src\Gateway\Graphql.API\Graphql.API.csproj", "{78221D7E-D3B2-4755-B359-C60989036186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphql.API", "src\Gateway\Graphql.API\Graphql.API.csproj", "{78221D7E-D3B2-4755-B359-C60989036186}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E97856A9-79F8-4118-A86F-26A15C44E731}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Student", "Student", "{0F6109DC-C231-4DA5-AB99-011B78629BFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.API", "src\Services\Student\Student.API\Student.API.csproj", "{1540F9F4-2EC2-441E-92F4-29774F902B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student.API", "src\Services\Student\Student.API\Student.API.csproj", "{1540F9F4-2EC2-441E-92F4-29774F902B31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{C3778DEF-F1E2-4772-AAAC-6EED4EC4280A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "src\Services\Payment\Payment.API\Payment.API.csproj", "{F9C405C4-3C3C-4F56-8307-C56BD46640B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "src\Services\Payment\Payment.API\Payment.API.csproj", "{F9C405C4-3C3C-4F56-8307-C56BD46640B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Address", "Address", "{6B39C3F0-FA20-4B69-8240-07A1FFCEBB1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Address.API", "src\Services\Address\Address.API\Address.API.csproj", "{A47CE2E7-C532-4FC6-92D4-133F20E4DD61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Address.API", "src\Services\Address\Address.API\Address.API.csproj", "{A47CE2E7-C532-4FC6-92D4-133F20E4DD61}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,9 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78221D7E-D3B2-4755-B359-C60989036186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -84,6 +83,21 @@ Global
 		{A47CE2E7-C532-4FC6-92D4-133F20E4DD61}.Release|x64.Build.0 = Release|Any CPU
 		{A47CE2E7-C532-4FC6-92D4-133F20E4DD61}.Release|x86.ActiveCfg = Release|Any CPU
 		{A47CE2E7-C532-4FC6-92D4-133F20E4DD61}.Release|x86.Build.0 = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|x64.Build.0 = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{1EAB640A-1FCC-4CDE-957E-1AC0A6E6B7AB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8C9CE111-2854-4321-A159-91E7DD2E2874} = {31ABBD13-5B20-4051-90A0-BB10100A004D}
@@ -95,5 +109,8 @@ Global
 		{F9C405C4-3C3C-4F56-8307-C56BD46640B6} = {C3778DEF-F1E2-4772-AAAC-6EED4EC4280A}
 		{6B39C3F0-FA20-4B69-8240-07A1FFCEBB1D} = {E97856A9-79F8-4118-A86F-26A15C44E731}
 		{A47CE2E7-C532-4FC6-92D4-133F20E4DD61} = {6B39C3F0-FA20-4B69-8240-07A1FFCEBB1D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {834D42E7-8173-4415-85BE-C8844CFE2A86}
 	EndGlobalSection
 EndGlobal
