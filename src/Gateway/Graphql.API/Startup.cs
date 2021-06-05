@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using Gateway.StudentInfo;
 using Graphql.API.GraphQL;
+using Graphql.API.Types;
 
 namespace Graphql.API
 {
@@ -41,7 +42,9 @@ namespace Graphql.API
 
             services
                 .AddGraphQLServer()
-                .AddQueryType<Query>();
+                .AddQueryType<Query>()
+                .AddType<StudentDtoType>()
+                .AddType<AddressDtoType>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
