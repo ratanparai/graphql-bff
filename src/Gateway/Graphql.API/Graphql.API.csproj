@@ -10,6 +10,12 @@
       <ClassName>AddressServiceClient</ClassName>
       <Namespace>Gateway.AddressInfo</Namespace>
     </OpenApiReference>
+
+    <OpenApiReference Include="OpenApi\Student.API.json">
+      <Options>/GenerateClientInterfaces:true /UseBaseUrl:false /OperationGenerationMode:SingleClientFromOperationId /GenerateExceptionClasses:false /AdditionalNamespaceUsages:Graphql.API</Options>
+      <ClassName>StudentServiceClientt</ClassName>
+      <Namespace>Gateway.StudentInfo</Namespace>
+    </OpenApiReference>
   </ItemGroup>
 
   <ItemGroup>
