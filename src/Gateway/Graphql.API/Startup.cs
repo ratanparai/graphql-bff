@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Gateway.AddressInfo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace Graphql.API
 {
@@ -30,6 +26,11 @@ namespace Graphql.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Graphql.API", Version = "v1" });
+            });
+
+            services.AddHttpClient<IAddressServiceClient, AddressServiceClient>(client =>
+            {
+                client.BaseAddress = new Uri("http://address.api");
             });
         }
 
