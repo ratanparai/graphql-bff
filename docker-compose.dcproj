@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>1eab640a-1fcc-4cde-957e-1ac0a6e6b7ab</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/graphql</DockerServiceUrl>
     <DockerServiceName>graphql.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

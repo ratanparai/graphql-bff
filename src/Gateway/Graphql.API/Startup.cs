@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using Gateway.StudentInfo;
+using Graphql.API.GraphQL;
 
 namespace Graphql.API
 {
@@ -32,6 +34,14 @@ namespace Graphql.API
             {
                 client.BaseAddress = new Uri("http://address.api");
             });
+            services.AddHttpClient<IStudentServiceClient, StudentServiceClient>(client =>
+            {
+                client.BaseAddress = new Uri("http://student.api");
+            });
+
+            services
+                .AddGraphQLServer()
+                .AddQueryType<Query>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +50,6 @@ namespace Graphql.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Graphql.API v1"));
             }
 
             app.UseRouting();
@@ -50,7 +58,7 @@ namespace Graphql.API
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapGraphQL();
             });
         }
     }

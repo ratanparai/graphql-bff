@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -13,12 +13,13 @@
 
     <OpenApiReference Include="OpenApi\Student.API.json">
       <Options>/GenerateClientInterfaces:true /UseBaseUrl:false /OperationGenerationMode:SingleClientFromOperationId /GenerateExceptionClasses:false /AdditionalNamespaceUsages:Graphql.API</Options>
-      <ClassName>StudentServiceClientt</ClassName>
+      <ClassName>StudentServiceClient</ClassName>
       <Namespace>Gateway.StudentInfo</Namespace>
     </OpenApiReference>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="11.2.2" />
     <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0-preview.4.21253.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,6 +30,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Types\" />
   </ItemGroup>
 
 </Project>
