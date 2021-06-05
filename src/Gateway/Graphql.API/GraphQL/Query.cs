@@ -6,7 +6,7 @@ namespace Graphql.API.GraphQL
 {
     public class Query
     {
-        public Task<StudentDto> GetStudentByIdAsync(
+        public Task<StudentDto> GetStudentAsync(
             string id,
             [Service] IStudentServiceClient studentServiceClient)
         {
