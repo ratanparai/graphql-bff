@@ -8,6 +8,8 @@ namespace Graphql.API.Types
     {
         protected override void Configure(IObjectTypeDescriptor<AddressDto> descriptor)
         {
+            descriptor.Name("Address");
+
             descriptor.Ignore(t => t.Id);
         }
     }

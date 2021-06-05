@@ -10,6 +10,7 @@ namespace Graphql.API.Types
     {
         protected override void Configure(IObjectTypeDescriptor<StudentDto> descriptor)
         {
+            descriptor.Name("Student");
 
             descriptor
                 .Field("Address")
