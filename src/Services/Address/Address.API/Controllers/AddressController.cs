@@ -13,8 +13,14 @@ namespace Address.API.Controllers
     {
         [HttpGet("{id}", Name = "GetAddress")]
         [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public ActionResult<AddressDto> GetAddress(string id)
         {
+            if (id == "NotFound")
+            {
+                return NotFound();
+            }
             return Ok(new AddressDto(id, "Dhaka", "Bangladesh"));
         }
     }
