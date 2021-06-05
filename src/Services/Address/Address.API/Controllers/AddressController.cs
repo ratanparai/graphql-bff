@@ -15,20 +15,22 @@ namespace Address.API.Controllers
         [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
         public ActionResult<AddressDto> GetAddress(string id)
         {
-            return Ok(new AddressDto
-            {
-                Id = id,
-                City = "Dhaka",
-                Country = "Bangladesh"
-            });
+            return Ok(new AddressDto(id, "Dhaka", "Bangladesh"));
         }
     }
 
     public class AddressDto
     {
+        public AddressDto(string id, string? city, string country)
+        {
+            Id = id;
+            City = city;
+            Country = country;
+        }
+
         public string Id { get; set; }
         
-        public string City { get; set; }
+        public string? City { get; set; }
 
         public string Country { get; set; }
     }

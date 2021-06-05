@@ -24,6 +24,7 @@ namespace Address.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Address.API", Version = "v1" });
+                c.SupportNonNullableReferenceTypes();
             });
         }
 
